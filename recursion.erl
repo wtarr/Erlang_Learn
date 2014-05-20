@@ -13,11 +13,11 @@ factorial(N) when N > 0 -> N * factorial(N - 1).
 %% f(3) -> 6 * 5 * 4 * 3 * f(3 - 1)
 %% f(2) -> 6 * 5 * 4 * 3 * 2 * f(2 - 1)
 %% f(1) -> 6 * 5 * 4 * 3 * 2 * 1
-%%		   6 * 5 * 4 * 3 * 2
-%%		   6 * 5 * 4 * 6
-%%		   6 * 5 * 24
-%%		   6 * 120
-%%		   720
+%%	   6 * 5 * 4 * 3 * 2
+%%	   6 * 5 * 4 * 6
+%%	   6 * 5 * 24
+%%	   6 * 120
+%%	   720
 
 
 factorialOpt(0) -> 1;
@@ -32,12 +32,12 @@ fibonacci(N) -> fibonacci(N - 1) + fibonacci(N - 2).
 %% Length of list
 %% This is OK for short lists
 len([]) -> 0;
-len([_|T]) -> 1 + len(T).	
+len([_|T]) -> 1 + len(T).
+
+
 %% Tail recursion approach
 %% The count travels with the function
 %% only need for two stores
-
-
 tail_fac(N) -> tail_fac(N, 1).
 
 tail_fac(0, Acc) -> Acc;
